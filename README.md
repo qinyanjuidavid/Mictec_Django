@@ -9,7 +9,7 @@
    
    - The next step is that we will need and editor where we will write our codes, You can choose from sublime text, Atom and VS Code. The link for; the sublime text is [Sublime Text Download](https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe), For Atom is [Atom](https://atom.io/download/windows_x64) and for the VS Code is [VS Code Download](https://code.visualstudio.com/download)
    
-   - Now we are good to get our hands dirty with the frame work for perfectionis:+1:.
+   - Now we are good to get our hands dirty with the frame work for perfectionist:+1:.
 
 ## Getting Started
    - After Doing all the above installations, Go to your windows search bar and search for anaconda and open it. Also you can confirm if you have python installed by typing **python --version** on the terminal. 
@@ -18,7 +18,7 @@
  
    - After the installation has taken place, lets create a folder where we will store our projects, type type ***mkdir Mictec*** the cd into that directory by typing ***cd Mictec*** on your terminal.
  
-   **NB: You ll need to pay attentsion to the spellings of the folder you have created and the folder you want to cd to.***
+   > NB: You ll need to pay attentsion to the spellings of the folder you have created and the folder you want to cd to.
    
    - The next step let us create a folder where we will house our project and the environment we will create. To do this we ll do as we have done above ***mkdir BlogEnv*** and then we ll cd into that folder by doing ***cd BlogEnv***. Now you should be an expert in that.
    - Now lets create our environment by typing the following command into the terminal ***python -m venv BlogEnv*** where the BlogEnv is the name of our environment. To activate our environment we will type ***BlogEnv/Scripts/activate*** into the terminal. You should see the name of BlogEnv behind the word Base on your terminal.
@@ -32,12 +32,15 @@
    
    - on your editor should see that some additional files have been added, now i want you to cd into the project that you have created above for my case i will ***cd src***
    
-   - now i want you to run our project by typing ***python manage.py runserver*** on your terminal you should see something amazing. ***Now that is not magic, it's your talent and your hard work*** Copy paste the address that you see [Local Host](http://127.0.0.1:8000/) http://127.0.0.1:8000/ and paste it on your browsers url, You should see a congratulations message telling you that you have run django.
+   - now i want you to run our project by typing ***python manage.py runserver*** on your terminal you should see something amazing. Copy paste the address that you see [Local Host](http://127.0.0.1:8000/) http://127.0.0.1:8000/ and paste it on your browsers url, You should see a congratulations message telling you that you have run django.
+   > Now that is not magic, it's your talent and your hard work
   
    - Now get back to your terminal and you should see an error message 
    > You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s)
 
-   - You can further access the admin panel by adding /admin to your url it should be something like ***http://127.0.0.1:8000/admin***. You should now be able to see a django admin login page.
+   - You can further access the admin panel by adding /admin to your url it should be something like ***http://127.0.0.1:8000/admin***. You should now be able to see a django admin login page. But you need to create a user that can login 
+   
+   - 
    
   
   
