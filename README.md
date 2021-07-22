@@ -9,6 +9,10 @@
    
    - The next step is that we will need and editor where we will write our codes, You can choose from sublime text, Atom and VS Code. The link for; the sublime text is <https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe>, For Atom is <https://atom.io/download/windows_x64> and for the VS Code is <https://code.visualstudio.com/download>
    
-   - Now we are good to get our hands dirty with the frame work for perfectionist.
+   - Now we are good to get our hands dirty with the frame work for perfectionist👌�.
+
+## Getting Started
+   - After Doing all the above installations, Go to your windows search bar and search for anaconda and open it. Also you can confirm if you have python installed by typing ~python --version~ on the terminal. 
+   - 
   
  
