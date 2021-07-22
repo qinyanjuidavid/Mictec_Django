@@ -35,12 +35,18 @@
    - now i want you to run our project by typing ***python manage.py runserver*** on your terminal you should see something amazing. Copy paste the address that you see [Local Host](http://127.0.0.1:8000/) http://127.0.0.1:8000/ and paste it on your browsers url, You should see a congratulations message telling you that you have run django.
    > Now that is not magic, it's your talent and your hard work
   
-   - Now get back to your terminal and you should see an error message 
+   - Now get back to your terminal and you should see an error message that reads;
    > You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s)
+   - To do away with this error message just type ***python manage.py migrate*** and the rerun your local server by using our usual command ***python manage.py runserver***
 
-   - You can further access the admin panel by adding /admin to your url it should be something like ***http://127.0.0.1:8000/admin***. You should now be able to see a django admin login page. But you need to create a user that can login 
+   - You can further access the admin panel by adding /admin to your url it should be something like ***http://127.0.0.1:8000/admin***. You should now be able to see a django admin login page. But you need to create a user that can be able to login. To do this type ***python manage.py createsuperuser*** it should prompt you to input a username, email and password and confirmation password.
+   - After you have done this rerun the server with the same command ***python manage.py runserver*** go to your admin url ***http://127.0.0.1:8000*** in your browser.
+   - You should now be able to login using the credentials that you have used in registering the new superuser on the terminal.
+   - After you have logged in you will be meet a nice user panel, with the group(s) and Users on the left side of the admin panel. Now i want you to enjoy yourself by creating new users and new groups.
    
-   - 
+   > Now Repeat the whole process for how many times? Let's just say 1000 times and you ll be looking to becoming the next [Jeff Dean](https://en.wikipedia.org/wiki/Jeff_Dean). In the next class we will create our first application and do something constractive.
+   
+   > Happy Coding!!!
    
   
   
