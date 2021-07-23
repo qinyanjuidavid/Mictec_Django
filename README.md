@@ -8,26 +8,24 @@
  
    - The next thing is to ensure that you have Python and Anaconda into your machine, You can download Python via     [Python Download](https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe) and then do the installations. For anaconda terminal the download link is [Anaconda Download](https://www.anaconda.com/download/#windows), Download it and do the installations.
    
-   - The next step is that we will need and editor where we will write our codes, You can choose one of this sublime text, Atom and VS Code. The link for downloading sublime text is [Sublime Text Download](https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe), For Atom is [Atom](https://atom.io/download/windows_x64) and for VS Code is [VS Code Download](https://code.visualstudio.com/download)
+   - The next step is that we will need an editor where we will write our codes, You can choose one of this; sublime text, Atom and VS Code. The link for downloading sublime text is [Sublime Text Download](https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe), For Atom is [Atom](https://atom.io/download/windows_x64) and for VS Code is [VS Code Download](https://code.visualstudio.com/download)
    
-   - Now we are good to get our hands dirty with the frame work for perfectionist:+1:.
+   - Now we are good to get our hands dirty with the framework for perfectionist:+1: :+1: :+1:
 
 ## Getting Started
-   - After Doing all the above installations, Go to your windows search bar and search for anaconda and open it. Also you can confirm if you have python installed by typing **python --version** on the terminal. 
+   - After Doing all the above installations, Go to your windows search bar and search for anaconda and open it. Also you can confirm if you have python installed by typing **python --version** on the anaconda terminal. 
    
-   - The next step is to download the virtual environment It is always important to create an environment where you will store all the dependencies for required by your project. There are two packages that i usually use for this case; virtualenv wrapper and the virtualenv. To do the installation you will type (on your anaconda terminal) ***pip install virtualenv*** to install the virtual env and  ***pip install virtualenvwrapper-win*** for windows and ***pip install virtualenvwrapper*** on linux.
- 
-   - After the installation has taken place, lets create a folder where we will store our projects, type ***mkdir Mictec*** the cd into that directory by typing ***cd Mictec*** on your terminal.
+   - The next step is to download the virtual environment, It is always important to create an environment where you will store all the dependencies required by your project. There are two packages that i usually use for this case; virtualenv wrapper and the virtualenv. For our project we will use the virtualenv, though you can still learn how to use the virtualenv wrapper and use it. To install the virtualenv type ***pip install virtualenv-win***. After the installation has taken place, lets create a folder where we will store our projects, type ***mkdir Mictec*** then cd into that directory by typing ***cd Mictec*** on your terminal.
  
    > NB: You ll need to pay attention to the spellings of the folder you have created and the folder you want to cd to.
    
-   - The next step let us create a folder where we will house our project and the environment we will create. To do this we ll do as we have done above ***mkdir BlogEnv*** and then we ll cd into that folder by doing ***cd BlogEnv***. 
+   - Let us now create a folder where we will house our project and the environment that we will create. To do this we ll do as we have done above ***mkdir BlogEnv*** and then we ll cd into that folder by doing ***cd BlogEnv***. 
    > Now you should be an expert in that.
    - Now lets create our environment by typing the following command into the terminal ***python -m venv BlogEnv*** where the BlogEnv is the name of our environment. To activate our environment we will type ***BlogEnv/Scripts/activate*** into the terminal. You should see the name of BlogEnv behind the word Base on your terminal.
    
-   - if you are using atom you can open your project folder on the editor by typing ***atom .*** and for VS Code you can type **code .** for sublime you can type ***subl .***. If any of that does not work, "Physically go to your local disk" and open the folder Users, then the folder named User or has your name, Scroll down and open the first folder that you created i.e The **Mictec folder***, Now you should see the folder named **BlogEnv**, Slowly drag :shipit: and drop it to your prefered editor.
+   - if you are using atom you can open your project folder on the editor by typing ***atom .*** and for VS Code you can type **code .** for sublime you can type ***subl .***. If any of that does not work, "Physically go to your local disk" and open the folder Users, then the folder named User or has your name, Scroll down and open the first folder that you created i.e The **Mictec folder***, Now you should see the folder named **BlogEnv**, Slowly drag and drop it :shipit: to your prefered editor.
 
-   - The next step is to now to install django, Simply type ***pip install django*** in your terminal.
+   - The next step is to now install django, Simply type ***pip install django*** in your terminal.
 
 ## Creating our Django Project
    - After we have installed Django, starting the project should now be a childs play. To start the project simply type ***django-admin startproject src*** Where src is the name of the project that you would want to create, It can be an E-Commerce Project, a blog, a todolist, space-z, etc.
@@ -51,7 +49,7 @@
    
    - You should now be able to login using the credentials that you have used in registering the new superuser on the terminal.
    
-   - After you have logged in you will be meet a nice user panel, with the group(s) and Users tabs on the left side of the admin panel. Now i want you to enjoy yourself by creating new users and new groups.
+   - After you have logged in you will be meet a nice looking user panel, with the group(s) and Users tabs on the left side. Now i want you to enjoy yourself by creating new users and new groups.
    
    > Now Repeat the whole process for how many times? Let's just say 1000 times and we ll be looking at the next [Jeff Dean](https://en.wikipedia.org/wiki/Jeff_Dean). In the next class we will create our first application and do something more constractive. Well, I hope you enjoyed that.
    
