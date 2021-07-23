@@ -19,7 +19,7 @@
  
    - After the installation has taken place, lets create a folder where we will store our projects, type ***mkdir Mictec*** the cd into that directory by typing ***cd Mictec*** on your terminal.
  
-   > NB: You ll need to pay attentsion to the spellings of the folder you have created and the folder you want to cd to.
+   > NB: You ll need to pay attention to the spellings of the folder you have created and the folder you want to cd to.
    
    - The next step let us create a folder where we will house our project and the environment we will create. To do this we ll do as we have done above ***mkdir BlogEnv*** and then we ll cd into that folder by doing ***cd BlogEnv***. 
    > Now you should be an expert in that.
