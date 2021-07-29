@@ -162,3 +162,5 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #
 - The word include will be useful to us, in that it well help us to include the urls and namespaces from the other applcations
 
 - The urlpattern **_urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)_** provides our project with the route where our uploaded images are stored ie. the media folder (It will be auto created). The urlpattern **_urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)_** provides our root urls.py with the routes to the folder where we store our static files ie. css, images and js files.
+- The next step is that i would like us to create the templates folder and the static folder in the base directory of our project, For this i would like you to look at our project layout and see where the templates and static folders are.
+- In the static directory i would also like you to create an additional 3 folders for css, js and images. Kindly, check at my repository and see where our directories are located.
