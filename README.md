@@ -121,9 +121,9 @@ STAIC_ROOT=os.path.join(BASE_DIR,"staticfiles")
 
 - The above lines of code helps in pointing our settings to the folders where our images, css and js are stored.
 
-- For the media, this is a folder that will be auto created,once we start uploading some images to our project. It's essence is that, it stores the image that we upload. For instance if you upload your profile picture, it will be stored in the media folder.
+- For the media, this is a folder that will be auto created,once we start uploading some images to our project. It's essence is that, it stores the images that we upload. For instance if you upload your profile picture, it will be stored in the media folder.
 
-- The next point that i would want you to go is in the urls.py,
+- The next point that i would like you to go is in the urls.py,
 
 > Keep in mind that this is our root URL file, and each project will have its urls which will be pointing to this root URL.
 
@@ -157,17 +157,17 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #
 
 ```
 
-- So the first line of code **_from django.conf.urls import static_** this basically enables us to import the statics urls in the settings.py
+- So the first line of code **_from django.conf.urls import static_** this basically enables us to import the statics urls from our settings.py
 - The code **_from django.conf import settings_**, this line of code just enables us to import our settings.py in to our urls.py
-- The word include will be useful to us, in that it well help us to include the urls and namespaces from the other applcations
+- The word include will be useful to us, in that it well help us to include the urls and namespaces from the other applications
 
 - The urlpattern **_urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)_** provides our project with the route where our uploaded images are stored ie. the media folder (It will be auto created). The urlpattern **_urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)_** provides our root urls.py with the routes to the folder where we store our static files ie. css, images and js files.
 - The next step is that i would like us to create the templates folder and the static folder in the base directory of our project, For this i would like you to look at our project layout and see where the templates and static folders are.
-- In the static directory i would also like you to create an additional 3 folders for css, js and images. Kindly, check at my repository and see where our directories are located.
+- In the static directory, i would also like you to create an additional 3 folders for css, js and images. Kindly, check my repository and see where our directories are located.
 
 ## Creating our first application
 
-- In django we usually work in applications for instance in an e-commerce project we usually have the following applications, Accounts,Payments,Store, Invoicing and etc.
+- In django we usually work with applications for instance in an e-commerce project we usually have the following applications, Accounts,Payments,Store, Invoicing,delivery and etc.
 - In this section we will first begin our project by creating an application called the **_blog_**
 - To create our first application type the following command in your terminal.
 
@@ -177,7 +177,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #
 
 > Kindly note that the term blog is the name of our application.
 
-- Once you have created our blog application you should see and additional folder in your folder with the name blog
+- Once you have created our blog application you should see an additional folder in your project with the name blog
 - If you expand that folder in your editor you might see the migrations folder, the dunder init script,(_init_.py),admin.py,apps.py,models.py,tests.py and the views.py.
 
 - Now i want you to add your application to your project, thus just go to your projects settings.py, in the INSTALLED_APPS=[] section and the apps name there. Your code for that section should look as follows;
