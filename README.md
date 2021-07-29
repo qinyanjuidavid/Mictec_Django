@@ -164,3 +164,33 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #
 - The urlpattern **_urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)_** provides our project with the route where our uploaded images are stored ie. the media folder (It will be auto created). The urlpattern **_urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)_** provides our root urls.py with the routes to the folder where we store our static files ie. css, images and js files.
 - The next step is that i would like us to create the templates folder and the static folder in the base directory of our project, For this i would like you to look at our project layout and see where the templates and static folders are.
 - In the static directory i would also like you to create an additional 3 folders for css, js and images. Kindly, check at my repository and see where our directories are located.
+
+## Creating our first application
+
+- In django we usually work in applications for instance in an e-commerce project we usually have the following applications, Accounts,Payments,Store, Invoicing and etc.
+- In this section we will first begin our project by creating an application called the **_blog_**
+- To create our first application type the following command in your terminal.
+
+```
+ python manage.py startapp blog
+```
+
+> Kindly note that the term blog is the name of our application.
+
+- Once you have created our blog application you should see and additional folder in your folder with the name blog
+- If you expand that folder in your editor you might see the migrations folder, the dunder init script,(_init_.py),admin.py,apps.py,models.py,tests.py and the views.py.
+
+- Now i want you to add your application to your project, thus just go to your projects settings.py, in the INSTALLED_APPS=[] section and the apps name there. Your code for that section should look as follows;
+
+  ```
+  # Application definition
+  INSTALLED_APPS = [
+      'django.contrib.admin',
+      'django.contrib.auth',
+      'django.contrib.contenttypes',
+      'django.contrib.sessions',
+      'django.contrib.messages',
+      'django.contrib.staticfiles',
+      'blog', #Name of your application
+      ]
+  ```
