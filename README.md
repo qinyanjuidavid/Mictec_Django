@@ -194,3 +194,22 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #
       'blog', #Name of your application
       ]
   ```
+
+- So the next step will be creating our urls.py for our blog application. The new urls.py should appear right inside the blog application.
+  > Kindly check the structure of our blog application before creating your urls, (Just to ensure that we are on the same page.)
+- The next step after you have created the urls.py, i want you to add the following lines of code to it.
+
+```
+from django.urls import path
+from blog import views
+
+app_name = "blog"
+
+urlpatterns = [
+#Currently we dont have any urls
+]
+
+```
+
+> To be continued
+> Happy Coding
