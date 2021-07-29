@@ -64,7 +64,7 @@
 
 - From our last class i can confidently state that, most of you now have the capabilities of creating a new project, running the migrations, creating a superuser and may be have some basic understanding of how the django admin panel works.
 - Additionally, most of you know what the settings.py does, what the urls.py is for and so on....
--
+
 - Probably, most of you have even created tonnes of these projects with the previous instructions and are even wondering what next after this, :sunglasses::sunglasses::sunglasses:
 
 > Before we go on just remember that this is a marathon and not a sprint, **_"Pasos cortos vision larga"_** which means **_Short Steps Long Vision_**. Thus, i would like to encourage you to continue creating at least 4 projects a day using the instructions from the previous class.
@@ -122,3 +122,43 @@ STAIC_ROOT=os.path.join(BASE_DIR,"staticfiles")
 - The above lines of code helps in pointing our settings to the folders where our images, css and js are stored.
 
 - For the media, this is a folder that will be auto created,once we start uploading some images to our project. It's essence is that, it stores the image that we upload. For instance if you upload your profile picture, it will be stored in the media folder.
+
+- The next point that i would want you to go is in the urls.py,
+
+> Keep in mind that this is our root URL file, and each project will have its urls which will be pointing to this root URL.
+
+- Currently, i know that in your urls.py there are some codes which are as follows (i deleted the comments above this lines of code)
+
+```
+from django.contrib import admin
+from django.urls import path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+
+    # I hope you remember the url https://127.0.0.1:8000/admin
+    # Now the /admin is right here, as we go on we will create our own urls and you ll learn what happens here
+    ]
+```
+
+- Now i want you to add the missing lines of code on your urls.py from the code below.
+
+```
+from django.conf.urls.static import static #Add this line
+from django.conf import settings #Add this Line
+from django.contrib import admin
+from django.urls import path, include #Add the word include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # Add this URL
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #Add this URL
+
+```
+
+- So the first line of code **_from django.conf.urls import static_** this basically enables us to import the statics urls in the settings.py
+- The code **_from django.conf import settings_**, this line of code just enables us to import our settings.py in to our urls.py
+- The word include will be useful to us, in that it well help us to include the urls and namespaces from the other applcations
+
+- The urlpattern **_urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)_** provides our project with the route where our uploaded images are stored ie. the media folder (It will be auto created). The urlpattern **_urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)_** provides our root urls.py with the routes to the folder where we store our static files ie. css, images and js files.
