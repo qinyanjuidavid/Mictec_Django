@@ -211,5 +211,5 @@ urlpatterns = [
 
 ```
 
-> To be continued
-> Happy Coding
+> To be continued...
+> Happy Coding!
