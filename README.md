@@ -62,18 +62,63 @@
 
 # Lesson II
 
-- After our last class i can confidently state that, most of you now have the capabilities of creating a new project, running the migrations, creating a superuser.
-- Additionally most of you now have a clear knowledge of what the settings.py does, what the urls.py is for and so on....
-- Probably, most of you have even created tonnes of these projects with the previous instructions and are even wondering what next after this :sunglasses::sunglasses::sunglasses:
+- From our last class i can confidently state that, most of you now have the capabilities of creating a new project, running the migrations, creating a superuser and may be have some basic understanding of how the django admin panel works.
+- Additionally, most of you know what the settings.py does, what the urls.py is for and so on....
+-
+- Probably, most of you have even created tonnes of these projects with the previous instructions and are even wondering what next after this, :sunglasses::sunglasses::sunglasses:
 
 > Before we go on just remember that this is a marathon and not a sprint, **_"Pasos cortos vision larga"_** which means **_Short Steps Long Vision_**. Thus, i would like to encourage you to continue creating at least 4 projects a day using the instructions from the previous class.
+
+## Getting started in todays lesson
 
 - In today's lesson we will start by configuring our **_settings.py_**, just adding some basic codes to it. So go to your settings.py and right at the top of the **_from pathlib import path_**, import the os simply by typing this line of code;
   ```
   import os
   ```
-- The other line of code in the settings.py that i would like you to alter with it is the **_ALLOWED_HOSTS=[]_** which usually helps us indicate the hosting platform that we would like to host our project in, but to do away with that i would like our project to be hosted by any hosting company thus your code should go as follows;
+- The other line of code (in the settings.py) that i would like you to alter with is the **_ALLOWED_HOSTS=[]_** which usually helps us in indicating the hosting platform that we would like to host our project in, but to do away with that, i would like our project to be hosted by any hosting company thus your code should go as follows;
 
 ```
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"] #We just added "*"
 ```
+
+- The next landing point is in the **_TEMPLATES=[]_** list, In this section i would like you to add just the **_os.path.join(BASE_DIR,"templates")_** in the empty "DIRS":[--here--], Thus your code in that section should appear as follows;
+
+```
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR,"templates")],# Changes were done here
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
+
+- What the above lines of code does is that they helps in pointing our project to the templates folder, ie. where we will be storing our html files. I know some of you are already farmiliar with this mark-up language.
+
+> We will be creating the templates folder soon.
+
+- The next lines of code that i would like you to add to our project are with regards to the Static files. Static files are the css,js and images.
+
+- So right below the STATIC_URL, i want you to include the following lines of code;
+
+```
+STATIC_URL = '/static/' #You can ommit this line since it is already in your project
+STATICDIRS_FILES=[
+os.path.join(BASE_DIR,"static")
+]
+MEDIA_URL="/media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+STAIC_ROOT=os.path.join(BASE_DIR,"staticfiles")
+```
+
+- The above lines of code helps in pointing our settings to the folders where our images, css and js are stored.
+
+- For the media, this is a folder that will be auto created,once we start uploading some images to our project. It's essence is that, it stores the image that we upload. For instance if you upload your profile picture, it will be stored in the media folder.
