@@ -326,4 +326,52 @@ path("", views.HomeView, name='home') #This is the line that we have added
 - After this go back to your terminal and ensure that your server is still running, if it's not just use our normal command **_python manage.py runserver_**.
 - Then, i want you to head to your browser and use our usual [local_host](https://127.0.0.1:8000) or you can still type it manually; https://127.0.0.1:8000
 - Now this is what i expect you to see;
-  ![alt text](https://djangoforbeginners.com/images/03_homepage.png)
+
+![alt text](https://djangoforbeginners.com/images/03_homepage.png)
+
+> If that Works **_Kudos! to you_** and **_Keep that Heat Blazing_**
+
+- Now I want us to create another two views; The about us view and the contact us view; So lets update our views.py with the following codes;
+
+```
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render
+
+
+# Create your views here.
+def HomeView(request):
+    return HttpResponse("<h1>Hello World</h1>")
+
+# About View
+def AboutUsView(request):
+    return HttpResponse("<h1>About Us</h1>")
+
+# Contact View
+def ContactUsView(request):
+    return HttpResponse("<h1>Contact Us</h1>")
+
+```
+
+- As you can see it is probably just copy and pasting, and i expect you should not have any errors;
+
+- After this lets head back to our blog.urls and update our urls.py with the following codes;
+
+```
+from django.urls import path
+from blog import views
+
+app_name = "blog"
+
+urlpatterns = [
+    path("", views.HomeView, name='home'),
+    path("about", views.AboutUsView, name="about"), # this is the url pointing to the AboutUsView
+    path("contact", views.ContactUsView, name="contact"), # this is the url pointing to the ContactUsView
+]
+
+```
+
+- On updating the urls.py check your terminal to ensure that the server is still running then head to your browser and type htpp://127.0.0.1:8000/about and see your about us page then do the same way and type http://127.0.0.1:8000/contact and see your contact us page.
+
+- Now i want you to go and practise more of what we have done today, in the next class we will connect our views to our templates and do a bit of the styling.
+
+> Happy Coding!!!
