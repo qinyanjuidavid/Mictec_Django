@@ -285,4 +285,4 @@ urlpatterns=[
 
 - A template consists of static parts of the desired HTML output as well as some special syntax describing how dynamic content will be inserted. To check more, visit – Django Templates
 
-![alt text](https://miro.medium.com/max/875/1*I_JVLw05Qqway-FQYq0ohg.png)
+![alt text](https://www.onlinetutorialspoint.com/wp-content/uploads/2021/01/django-mvt-based-control-flow.png)
