@@ -220,12 +220,12 @@ urlpatterns = [
 
 # Recarp
 
-- From our last class we were to learn how to create our first application. Probably, you might have even gone further to creating new projects with new applications. As i stated earlier, in django we usually work in applications.
-- It is worth noting that for a complex project it is a great idea to split up the whole project into applications. In doing this it always helps you plan the work flow of your project, for instance if you are developing a chat application using the django channels, you might find out that spliting the whole project might bring rise to an accounts application and a chat application.
+- From our last class we were able to create our first application. Probably, you might have even gone ahead in creating new projects with new applications. As i stated earlier, in django we usually work in applications.
+- It is worth noting that for a complex project, it is a great idea to split up the whole project into applications. In doing this it always helps you plan the work flow of your project, for instance if you are developing a chat application using the django channels, you might find out that spliting the whole project might bring rise to an accounts application and a chat application.
 - Basically, this might tell you that you need to start working on the Accounts application before you can get your hands dirty with the chat app.
 - Also, the reason as to why i recommend the use of application is because, in many work places developers usually work in tickets, where by you go and pick a ticket that holds a certain feature such that your feature might involve you or your team to work on a certain application lets even say a delivery application or a ticketing module which will fall in the ticketing ticketing application.
 
-- To bring a recarp of how we created our Blog application, we typed this command in our terminal;
+- In the last lesson we created our Blog application, using the command;
 
   ```
   python manage.py startapp <AppName (Blog)>
