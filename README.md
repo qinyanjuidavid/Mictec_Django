@@ -269,7 +269,7 @@ urlpatterns=[
 
 ## Creating our first view
 
--Django is based on MVT (Model-View-Template) architecture. MVT is a software design pattern for developing a web application.
+- Django is based on MVT (Model-View-Template) architecture. MVT is a software design pattern for developing a web application.
 
 - The MVT Structure has the following three parts –
 
@@ -279,10 +279,51 @@ urlpatterns=[
 
 ### View
 
--The View is the user interface — what you see in your browser when you render a website. It is represented by HTML/CSS/Javascript and Jinja files.
+- The View is the user interface — what you see in your browser when you render a website. It is represented by HTML/CSS/Javascript and Jinja files.
 
 ### Template
 
 - A template consists of static parts of the desired HTML output as well as some special syntax describing how dynamic content will be inserted. To check more, visit – Django Templates
 
 ![alt text](https://www.onlinetutorialspoint.com/wp-content/uploads/2021/01/django-mvt-based-control-flow.png)
+
+- So let us now head to our views.py file while you will only find one line of code;
+
+```
+from django.shortcuts import render
+```
+
+- So let us update this Script with the following codes
+
+```
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render # You can ignore this line of code
+
+
+# Create your views here.
+def HomeView(request):
+    return HttpResponse("<h1>Home Page</h1>") #You can type "<h1> Hello World</h1>"
+
+```
+
+- What we have done here we have created a python function and named it HomeView, we have also passed a request parameter inside it.
+- Soo, our function is suppost to return a HttpResponse which is supposed to help use send a POST or GET request in between our Database and the web, through the help of the server.
+
+- After we have created this home view lets head straight into the urls.py for our blog application. Inside the blogs.urls lets update the script using the following line of code;
+
+```
+  from django.urls import path
+  from blog import views
+
+app_name = "blog"
+
+urlpatterns = [
+path("", views.HomeView, name='home') #This is the line that we have added
+]
+
+```
+
+- After this go back to your terminal and ensure that your server is still running, if it's not just use our normal command **_python manage.py runserver_**.
+- Then, i want you to head to your browser and use our usual [local_host](https://127.0.0.1:8000) or you can still type it manually; https://127.0.0.1:8000
+- Now this is what i expect you to see;
+  ![alt text](https://djangoforbeginners.com/images/03_homepage.png)
