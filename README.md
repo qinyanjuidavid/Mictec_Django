@@ -14,6 +14,8 @@
 
 - Now we are good to get our hands dirty with the framework for perfectionist:+1: :+1: :+1:
 
+# Lesson I
+
 ## Getting Started
 
 - After Doing all the above installations, Go to your windows search bar and search for anaconda and open it. Also you can confirm if you have python installed by typing **python --version** on the anaconda terminal.
@@ -213,3 +215,54 @@ urlpatterns = [
 
 > To be continued...
 > Happy Coding!
+
+# Lesson III
+
+# Recarp
+
+- From our last class we were to learn how to create our first application. Probably, you might have even gone further to creating new projects with new applications. As i stated earlier, in django we usually work in applications.
+- It is worth noting that for a complex project it is a great idea to split up the whole project into applications. In doing this it always helps you plan the work flow of your project, for instance if you are developing a chat application using the django channels, you might find out that spliting the whole project might bring rise to an accounts application and a chat application.
+- Basically, this might tell you that you need to start working on the Accounts application before you can get your hands dirty with the chat app.
+- Also, the reason as to why i recommend the use of application is because, in many work places developers usually work in tickets, where by you go and pick a ticket that holds a certain feature such that your feature might involve you or your team to work on a certain application lets even say a delivery application or a ticketing module which will fall in the ticketing ticketing application.
+
+- To bring a recarp of how we created our Blog application, we typed this command in our terminal;
+
+  ```
+  python manage.py startapp <AppName (Blog)>
+  ```
+
+- After we created this application we went to our settings and placed the name of our applications in the ```
+
+```
+installed_apps=[
+  'Blog',
+  ]
+```
+
+- On finishing this we headed to our Blog application folder and created a **_urls.py_** file and inside this file we wrote this codes;
+
+```
+from django.urls import path
+from Blog import views
+app_name="Blog" #App name is the name of your application it might be Store,Delivery,Chat,Ticketing,....
+
+urlpatterns=[
+
+]
+```
+
+- After doing this headed straight into our root urls to tell it that we have other urls that are for another application in doing this, this is how the whole code block should look like,
+
+  ```
+  from django.conf.urls.static import static
+  from django.conf import settings
+  from django.contrib import admin
+  from django.urls import path, include
+
+  urlpatterns = [
+  path('admin/', admin.site.urls),
+  path("",include("blog.urls")) #This is the url that we added it is pointing to the blog.urls
+  ]
+  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+  urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+  ```
